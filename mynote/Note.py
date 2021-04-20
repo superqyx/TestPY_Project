@@ -21,7 +21,7 @@ class NoteBook(object):
 
     def __find_note(self, note_id):
         for note in self.notes:
-            if note.id == note_id:
+            if str(note.id) == str(note_id):
                 return note
         return None
 
@@ -29,7 +29,12 @@ class NoteBook(object):
         self.notes.append(Note(memo, tags))
 
     def modify_memo(self, note_id, memo):
-        self.__find_note(note_id).memo = memo
+        note = self.__find_note(note_id)
+        if note:
+            note.memo = memo
+            return True
+        else:
+            return False
 
     def modify_tags(self, note_id,tags):
         self.__find_note(note_id).tag = tags
@@ -37,3 +42,8 @@ class NoteBook(object):
     def search(self, filter):
         return [note for note in self.notes if note.match(filter)]
 
+if __name__ == '__main__':
+    notebook = NoteBook()
+    notebook.new_note("sdfnf")
+    notebook.modify_memo(1,"hhhhh")
+    print(notebook.notes[0].memo)
