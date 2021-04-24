@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31e8a0cc-a868-49fd-bf89-981be6e9d98b" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/OO_Study/DogDoor_Ver1/DogDoorSimulator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OO_Study/DogDoor_Ver1/Remote.py" afterDir="false" />
+    <list default="true" id="31e8a0cc-a868-49fd-bf89-981be6e9d98b" name="默认变更列表" comment="test commit">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OO_Study/DogDoor_Ver1/BarkRecognizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TestPY_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TestPY_Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OO_Study/DogDoor_Ver1/DogDoor.py" beforeDir="false" afterPath="$PROJECT_DIR$/OO_Study/DogDoor_Ver1/DogDoor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mynote/abc_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/mynote/abc_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +26,6 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
@@ -42,6 +44,8 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="DogDoorSimulator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -94,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619015947576</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test commit">
+      <created>1619021884592</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619021884592</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

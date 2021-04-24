@@ -1,4 +1,4 @@
-
+import time
 
 class DogDoor(object):
     def __init__(self):
@@ -14,4 +14,10 @@ class DogDoor(object):
 
     def is_open(self):
         return  self.openstate
+
+    def auto_close_door(self):
+        time.sleep(5)
+        if self.openstate:
+            self.close_door()
+
 
