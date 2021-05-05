@@ -7,3 +7,4 @@ class BarkRecognizer(object):
     def reognize(self):
         print("BarkRecognizer : Heard a bark")
         self.door.open()
+        self.door.auto_close_door()
