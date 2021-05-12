@@ -4,43 +4,34 @@ import pathlib
 import filecmp
 
 
-class MyFileTools(object):
-    def __init__(self, src_dir='./', dest_dir='./', suffix_name='*'):
-        self._src_dir = pathlib.Path(src_dir)
-        self._dest_dir = pathlib.Path(dest_dir)
-        self._suffix_name = suffix_name
-
-    @property
-    def src_dir(self):
-        return self._src_dir
-    @src_dir.setter
-    def src_dir(self, src_dir):
-        if not src_dir.endwith('/'):
-            src_dir += '/'
-        self._src_dir = pathlib.Path(src_dir)
-
-    @property
-    def dest_dir(self):
-        return self._dest_dir
-    @dest_dir.setter
-    def dest_dir(self,dest_dir):
-        self._dest_dir = pathlib.Path(dest_dir)
-
-    @property
-    def suffix_name(self):
-        return self._suffix_name
-    @suffix_name.setter
-    def suffix_name(self,suffix_name):
-        self._suffix_name = suffix_name
-
-    def class_file(self):
-        pass
+def getFiles(extendions,src_dir):
+    ext_list = extendions.split(',')
+    print(ext_list)
+    file_list = []
+    for ext in ext_list:
+        file_list.extend(src_dir.rglob(ext))
+    return file_list
 
 
- '''This is test code'''
+
+
+
+'''This is test code'''
+
 if __name__ == '__main__':
     print("This is a file classfy function")
-    my_file_tool = MyFileTools()
+    src_dir = pathlib.Path(input("the src_dir:"))
+    dest_dir = pathlib.Path(input("the dest_dir:"))
+    exts = input("The extendions")
+    result_files = getFiles(exts, src_dir)
+    for i in result_files:
+        if i.is_file():
+            suffixName = i.suffix.strip('.')
+            if not (dest_dir/suffixName).exists():
+                (dest_dir/suffixName).mkdir(parents=True)
+            if not (dest_dir/i.name).exists():
+                i.replace(dest_dir/suffixName / i.name)
+
 
 
 
