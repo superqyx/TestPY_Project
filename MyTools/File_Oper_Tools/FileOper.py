@@ -34,7 +34,7 @@ class MyFileTools(object):
         self._suffix_name = suffix_name
 
     def class_file(self):
-
+        pass
 
 
  '''This is test code'''
