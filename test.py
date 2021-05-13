@@ -1,11 +1,23 @@
-import selenium
-import selenium.webdriver
+import matplotlib.pyplot as plt
+import numpy as np
 
-browser = selenium.webdriver.Chrome()
-browser.get("http://www.baidu.com")
-browser.get_screenshot_as_file("baidu.png")
+# np.random.seed(1)
+# x = np.arange(10)
+# y = np.random.randint(0,9,10)
+#
+# plt.plot(x,y)
+# plt.show()
 
-def func(self):
-    print("hello world")
+def f2(x,w):
+    return (x+w) * x * (x+2)
+x = np.linspace(-3, 3, 100)
+plt.plot(x, f2(x,2), color='black', label='$w=2$')
+plt.plot(x, f2(x,1), color='blue', label='$w=1$')
+plt.legend(loc='upper center')
+plt.title("$f_2(x)$")
+plt.xlabel('x')
+plt.ylabel('y')
+plt.ylim(-15,15)
+plt.grid(True)
 
-Foo = type("Foo",(object,),{'func':func})
+plt.show()
