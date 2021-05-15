@@ -10,6 +10,7 @@ import numpy as np
 
 def f2(x,w):
     return (x+w) * x * (x+2)
+
 x = np.linspace(-3, 3, 100)
 # plt.plot(x, f2(x,2), color='black', label='$w=2$')
 # plt.plot(x, f2(x,1), color='blue', label='$w=1$')
