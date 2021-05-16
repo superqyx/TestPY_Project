@@ -3,6 +3,7 @@ import shutil
 import pathlib
 import filecmp
 from PIL import Image
+from exifread import process_file
 
 
 def getFiles(extendions,src_dir):
