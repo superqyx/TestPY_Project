@@ -2,6 +2,7 @@ import os
 import shutil
 import pathlib
 import filecmp
+from PIL import Image
 
 
 def getFiles(extendions,src_dir):
@@ -25,7 +26,16 @@ def classifyFiles(src_dir, dest_dir,exts):
             if not (dest_dir / i.name).exists():
                 i.replace(dest_dir / suffixName / i.name)
 
-
+def changeImagSuffix(ext_name, src_dir, dest_dir):
+    dest_dir = dest_dir
+    if not dest_dir.exists():
+        dest_dir.mkdir(parents=True)
+    file_list = list(src_dir.glob("*.jpg"))
+    for i in file_list:
+        dest_file = dest_dir / i.name
+        dest_file = dest_file.wit_suffix(".png")
+        Image.open(i).save(dest_file)
+        print("Convert has been complieted...")
 
 '''This is test code'''
 
