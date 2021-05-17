@@ -2,7 +2,8 @@ import os
 import shutil
 import pathlib
 import filecmp
-import PIL
+from PIL import Image
+from exifread import process_file
 
 
 def getFiles(extendions,src_dir):
@@ -58,6 +59,16 @@ def replaceDuplicatFiles(flag, src_dir, dest_dir=None):
         print("The program has something wrong:",e)
 
 
+def changeImagSuffix(ext_name, src_dir, dest_dir):
+    dest_dir = dest_dir
+    if not dest_dir.exists():
+        dest_dir.mkdir(parents=True)
+    file_list = list(src_dir.glob("*.jpg"))
+    for i in file_list:
+        dest_file = dest_dir / i.name
+        dest_file = dest_file.wit_suffix(".png")
+        Image.open(i).save(dest_file)
+        print("Convert has been complieted...")
 
 '''This is test code'''
 
